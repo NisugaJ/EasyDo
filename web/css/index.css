@@ -1,0 +1,20 @@
+#flyer {
+    margin-left: auto;
+    margin-right: auto;
+    width: device-width;
+    display: block;
+    /* margin-top: 10px; */
+    text-align: center;
+
+}
+
+.navbar.color {
+    background-color: teal;
+    color: thistle;
+}
+
+.item-carousel{
+    height: 40vh;
+    align-content: center;
+    margin-left: 50px;
+}

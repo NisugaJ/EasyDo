@@ -1,0 +1,207 @@
+@import 'comfortaa.css';
+
+*{
+    font-family:  'Comfortaa';
+}
+
+.dark-primary-color {
+    background: #1976D2;
+}
+
+.default-primary-color {
+    background: #2196F3;
+}
+
+.light-primary-color {
+    background: #BBDEFB;
+}
+
+.text-primary-color {
+    color: #FFFFFF;
+}
+
+.accent-color {
+    background: #9E9E9E;
+}
+
+.primary-text-color {
+    color: #212121;
+}
+
+.secondary-text-color {
+    color: #f8f8f8;
+}
+
+.divider-color {
+    border-color: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    /* background-color:#ff6f00; */
+        background: linear-gradient(to right, #22ff00, #00ff5e);
+
+}
+
+html,
+body.light-primary-color {
+    height: 100%;
+    font-family: 'Comfortaa';
+    /* background-color: #2196F3; */
+}
+
+.navbar-content-margin-fix {
+    margin-top: 55px;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+    margin-bottom: 20px;
+}
+
+.wrap>.container {
+    padding: 70px 15px 20px;
+    margin-top: 20px;
+}
+
+.footer {
+    position: relative;
+    height: 60px;
+    background-color: #212121;
+    border-top: 1px solid #ddd;
+    margin-top: 300px;
+    padding-top: 20px;
+    color: #999;
+}
+
+.jumbotron {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    height: 80vh;
+    position: relative;
+    overflow: visible;
+    align-content: center;
+    margin-bottom: 100px;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+.colored {
+    background: #1976D2;
+    opacity: 0.7;
+}
+
+
+/* add sorting icons to gridview sort links */
+
+a.asc:after,
+a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+    background-color: navajowhite;
+}
+
+
+a.asc:after {
+    content: /*"\e113"*/
+    "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/
+    "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+
+/* align the logout "link" (button in form) of the navbar */
+
+.navbar {
+    height: fit-content;
+}
+
+.nav li>form>button.logout {
+    padding: 15px;
+    border: none;
+}
+
+.a{
+    color: #FFFFFF;
+}
+
+@media(max-width:767px) {
+    .nav li>form>button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav>li>form>button.logout:focus,
+.nav>li>form>button.logout:hover {
+    text-decoration: none;
+}
+
+.nav>li>form>button.logout:focus {
+    outline: none;
+}
