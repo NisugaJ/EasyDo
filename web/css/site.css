@@ -1,6 +1,7 @@
 @import 'comfortaa.css';
 
 *{
+    /* font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family:  'Comfortaa';
 }
 
@@ -41,7 +42,7 @@ body {
     position: relative;
     min-height: 100vh;
     /* background-color:#ff6f00; */
-        background: linear-gradient(to right, #22ff00, #00ff5e);
+        background: linear-gradient(to right, #874ba3, #8400ff);
 
 }
 
@@ -65,8 +66,7 @@ body.light-primary-color {
 }
 
 .wrap>.container {
-    padding: 70px 15px 20px;
-    margin-top: 20px;
+    padding: 5px;
 }
 
 .footer {
@@ -175,9 +175,9 @@ a.desc:after {
 
 /* align the logout "link" (button in form) of the navbar */
 
-.navbar {
+/* .navbar {
     height: fit-content;
-}
+} */
 
 .nav li>form>button.logout {
     padding: 15px;
@@ -204,4 +204,28 @@ a.desc:after {
 
 .nav>li>form>button.logout:focus {
     outline: none;
+}
+
+
+.btn{
+    background: linear-gradient(to right, #ff6600 , #ff7d32);
+    border-color: orange;
+}
+
+.btn:hover{
+    background: linear-gradient(to right, #ff7d32 , #ff6600);
+    border-color: white;
+
+}
+
+::selection {
+    background: #ffe4d2 ; /* WebKit/Blink Browsers */
+  }
+
+.pull-left{
+    margin-left: 200px;
+}
+
+.footer-container{
+    margin-left: 5px;
 }

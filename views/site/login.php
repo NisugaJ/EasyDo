@@ -1,3 +1,5 @@
+<meta  content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../web/css/login.css">
 <?php
 
 /* @var $this yii\web\View */
@@ -7,8 +9,6 @@
 use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Alert;
-
-
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -29,8 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Please fill out the following fields to login:</p>
 
     <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+        <div class="col-lg-5" id="login-form">
+            <?php $form = ActiveForm::begin([
+                'id' => 'login-form',
+                ]); ?>
 
                 <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 

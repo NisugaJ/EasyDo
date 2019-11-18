@@ -14,38 +14,56 @@ use yii\bootstrap4\Carousel;
 $this->title =Yii::$app->name ;
 ?>
 <div class="site-index">
-    <!-- <img id="flyer" src="../web/images/flyer.jpg" width="800" height="533" > -->
-   <?php
-        $items=[
-            '<div class="item-carousel">
-                <h2>Your Notes</h2>
-                <h3>At one place</h3>
-                <a href="/EasyDo/web/index.php?r=site/register" class="btn btn-lg btn-primary">Get Registered Today 😍 </a>
-            </div>',
-            '<h2 class="s">adsdafas</h2>',
-            '<h2 class="s">adsdafas</h2>',
-            '<h2 class="s">adsdafas</h2>',
-                // '<img class="item-carousel" src="../web/images/userIcon.png"/>',
-                // '<img class="item-carousel" src="../web/images/userIcon-white.png"/>',
-                // '<img class="item-carousel" src="../web/images/flyer.jpg"/>',
-                
-            ];
+<div class="jumbotron">
 
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left active">
+                <h1>Your Notes</h1>
+                <h3>At One Place</h3>
+                <p><a class="btn btn-lg btn-primary" href="/EasyDo/web/index.php?r=site/register" role="button">Get Registered Today😍</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="https://getbootstrap.com/docs/4.0/examples/carousel/#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="https://getbootstrap.com/docs/4.0/examples/carousel/#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
-        echo Carousel::widget([
-        'items' => $items,
-        // 'options' => ['class' => '']
-            //[the item contains only the image
-            // '<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>',
-            // '<img src="https://miro.medium.com/max/3840/1*d1oxh4HnicCCx6eWB9ienQ.png"/>',
-            // '<img src="https://www.luisllamas.es/wp-content/uploads/2018/01/instalar-servidor-web-xampp.png"/>',
-            // equivalent to the above
-            // 'content' => '<img src="http://twitter.github.io/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg"/>',
-            // the item contains both the image and the caption            ]
-
-        ]);
-   ?>
-    <div class="jumbotron">
         <h1 style="font-size:60px;"><b><b>Welcome to <?=Yii::$app->name ?></b></b></h1>
         <?php
         $button =   Html::a(
@@ -59,7 +77,7 @@ $this->title =Yii::$app->name ;
         <br>
         <br>
         <p><button onclick="window.location.href='/EasyDo/web/index.php?r=site/login'"
-                   class="btn btn-lg btn-primary"><?php echo Yii::$app->user->isGuest ? 'Login' : 'Hi '.Yii::$app->user->identity->username.'<br>'.'Anything to be noted ?' ?></button></p>
+                   class="btn btn-lg btn-primary"><?php echo Yii::$app->user->isGuest ? 'Login' : 'Hi '.Yii::$app->user->identity->username. ',<br>'.'Anything to be noted?  🖊 '?></button></p>
      
         <?php
             Yii::$app->user->isGuest ? :  
@@ -96,4 +114,8 @@ $this->title =Yii::$app->name ;
     </div>
 </div>
     <!-- Load our React component. -->
+    <script >
+        ReactDOM.render( React.createElement('div',null, <?php echo json_encode(Yii::$app->name) ?> ), document.getElementById('react-test') );
+    </script>
     <!-- <script src="./js/index.js"></script> -->
+
